@@ -33,7 +33,7 @@ const Login = (props) => {
             value="LOGIN"
             id=""
             onClick={() => {
-              navigate("/xiuu-task-manager");
+              navigate("/");
             }}
           />
         </div>
