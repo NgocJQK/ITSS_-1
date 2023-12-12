@@ -46,6 +46,7 @@ To run the React frontend:
 ```
 cd frontend  
 npm install
+npm audit fix --force
 npm start  
 ```
 
