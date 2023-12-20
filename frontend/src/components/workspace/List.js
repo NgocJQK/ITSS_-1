@@ -3,7 +3,7 @@ import { Avatar, Tooltip, Button, Row, Col, Table } from "antd";
 import "./list.scss";
 import TaskDetail from "../../components/modal/TaskDetail.jsx";
 import CreateTask from "../../components/modal/CreateTask.jsx";
-const List = ({ workspace, taskList, userList }) => {
+const リスト = ({ workspace, taskList, userList }) => {
   const [workspaceTask, setWorkspaceTask] = useState([]);
   const [isModalDetailVisible, setIsModalDetailVisible] = useState(false);
   const [isModalCreateOpen, setIsModalCreateOpen] = useState(false);
@@ -67,7 +67,7 @@ const List = ({ workspace, taskList, userList }) => {
 
   const columns = [
     {
-      title: "Workspace",
+      title: "作業領域",
       dataIndex: "workspace",
       key: "workspace",
       render: (workspace) => <span>{workspace.name}</span>,
@@ -125,7 +125,7 @@ const List = ({ workspace, taskList, userList }) => {
         }}
       >
         <div>
-          <span>Filter: </span>
+          <span>フィルター: </span>
           {workspace.user.map((user) => (
             <Tooltip
               key={user.id}
@@ -233,4 +233,4 @@ const List = ({ workspace, taskList, userList }) => {
   );
 };
 
-export default List;
+export default リスト;

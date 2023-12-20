@@ -1,7 +1,7 @@
 import React from 'react'
 import TaskDetail from '../modal/TaskDetail'
 
-const Recent = props => {
+const 今次 = props => {
 
   return (
     <div>
@@ -10,4 +10,4 @@ const Recent = props => {
   )
 }
 
-export default Recent
+export default 今次

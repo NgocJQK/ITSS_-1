@@ -8,12 +8,12 @@ const Chart1 = () => {
     labels: ["1", "2", "3", "4", "5", "6"],
     datasets: [
       {
-        label: "Scheduled",
+        label: "計画",
         data: [12, 19, 30, 20, 15, 8],
         backgroundColor: "#264ECA",
       },
       {
-        label: "Done",
+        label: "完了",
         data: [8, 14, 13, 10, 5, 7],
         backgroundColor: "#08D604",
       },

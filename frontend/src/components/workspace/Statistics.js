@@ -1,19 +1,19 @@
 import React from "react";
 import MultiColorProgressBar from "../progress-bar/index";
-const Statistics = ({ workspace, userList }) => {
+const 統計 = ({ workspace, userList }) => {
   const readings = [
     {
-      name: "Done",
+      name: "完了",
       value: 16,
       color: "green",
     },
     {
-      name: "In process",
+      name: "発展中",
       value: 70,
       color: "#EFCD1A",
     },
     {
-      name: "Late",
+      name: "遅く",
       value: 14,
       color: "red",
     },
@@ -29,4 +29,4 @@ const Statistics = ({ workspace, userList }) => {
   );
 };
 
-export default Statistics;
+export default 統計;

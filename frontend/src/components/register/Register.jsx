@@ -3,7 +3,7 @@ import "./register.css";
 import logo from "./logo.png";
 import { LockOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
-const Register = () => {
+const 登録 = () => {
   const navigate = useNavigate()
   return (
     <div className="section">
@@ -15,18 +15,18 @@ const Register = () => {
           </div>
 
           <form onSubmit={()=>navigate("/login")}>
-            <input type="text" placeholder=" FULL NAME" />
-            <input type="text" placeholder=" USER NAME" />
-            <input type="password" placeholder=" PASSWORD" />
-            <input type="password" placeholder=" CONFIRM PASSWORD" />
-            <input type="submit" value="SIGN UP" />
+            <input type="text" placeholder=" フルネーム" />
+            <input type="text" placeholder=" ユーザーネーム" />
+            <input type="password" placeholder=" パスワード" />
+            <input type="password" placeholder=" パスワードを認証" />
+            <input type="submit" value="登録" />
           </form>
-          <a class="question">Are you already have an account?</a>
-          <a onClick={(e)=>navigate("/login")} style={{cursor:"pointer"}}> Login</a>
+          <a class="question">すでにアカウントをお持ちですか？</a>
+          <a onClick={(e)=>navigate("/login")} style={{cursor:"pointer"}}> ログイン</a>
         </div>
       </div>
     </div>
   );
 };
 
-export default Register;
+export default 登録;

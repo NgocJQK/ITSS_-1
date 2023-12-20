@@ -1,18 +1,18 @@
 import React, { useState } from 'react'
 import { Tabs } from 'antd'
 import useStyleYourWork from './style'
-import Dashboard from './Dashboard'
-import Calendar from './calendar/Calendar'
-import Recent from './recent/Recent'
+import ダッシュボード from './Dashboard'
+import カレンダー from './calendar/Calendar'
+import 今次 from './recent/Recent'
 
 const YourWork = props => {
   const [tab, setTab] = useState('recent')
   const classes = useStyleYourWork()
 
   const tabItems = [
-    { label: 'Recent', key: 'recent' },
-    { label: 'Dashboard', key: 'dashboard' },
-    { label: 'Calendar', key: 'calendar' }
+    { label: '今次', key: 'recent' },
+    { label: 'ダッシュボード', key: 'dashboard' },
+    { label: 'カレンダー', key: 'calendar' }
   ]
 
   const handleOnChange = (value) => {
@@ -25,9 +25,9 @@ const YourWork = props => {
         <Tabs tabBarStyle={{ width: '180px', marginLeft: '30px' }} tabPosition='left' items={tabItems} onChange={handleOnChange}/>
       </div>
       <div className={classes.content}>
-        {tab === 'recent' && <Recent setTab={setTab}/>}
-        {tab === 'dashboard' && <Dashboard/>}
-        {tab === 'calendar' && <Calendar/>}
+        {tab === 'recent' && <今次 setTab={setTab}/>}
+        {tab === 'dashboard' && <ダッシュボード/>}
+        {tab === 'calendar' && <カレンダー/>}
       </div>
     </div>
   )

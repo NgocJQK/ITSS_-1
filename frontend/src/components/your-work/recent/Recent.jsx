@@ -6,7 +6,7 @@ import { ClockCircleOutlined } from "@ant-design/icons";
 import { useSelector } from "react-redux";
 import dayjs from "dayjs";
 
-const Recent = ({ setTab }) => {
+const 今次 = ({ setTab }) => {
   const taskList = useSelector((state) => state.data.taskList);
   const today = new Date();
   const ahi = dayjs()
@@ -23,7 +23,7 @@ const Recent = ({ setTab }) => {
     <div className="container">
       <div className="parent1">
         <div className="today">
-          <p>Today's tasks</p>
+          <p>今日のタスク</p>
 
           {taskList.map((task) => {
             if (
@@ -58,11 +58,11 @@ const Recent = ({ setTab }) => {
               setTab("calendar");
             }}
           >
-            View Calendar
+            カレンダーCalendar
           </span>
         </div>
         <div className="today_task">
-          <p>Tomorrow's tasks</p>
+          <p>明日のタスク</p>
           {/* <img src={anh1} className="today_task_img" alt="" /> */}
           {taskList.map((task) => {
             if (
@@ -90,13 +90,13 @@ const Recent = ({ setTab }) => {
             //   setTab("calendar");
             // }}
           >
-            View All
+            ディテール
           </span>
         </div>
       </div>
       <div className="parent2">
         <div className="recent_record">
-          <p>Recent Records</p>
+          <p>最近の記録 </p>
           <div className="project">
             <ClockCircleOutlined />
             <span className="pj_detail">UIUX Project (UIUX)</span>
@@ -115,9 +115,9 @@ const Recent = ({ setTab }) => {
           </div>
         </div>
         <div className="key_deal">
-          <p>Key Deals - Recent Opportunities</p>
+          <p>最近の機会</p>
           <span className="nodeal">
-            No deals yet. Select another filter or check back later.
+            なし
           </span>
         </div>
       </div>
@@ -125,4 +125,4 @@ const Recent = ({ setTab }) => {
   );
 };
 
-export default Recent;
+export default 今次;

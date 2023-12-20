@@ -91,11 +91,11 @@ const CreateTask = ({ isModalCreateOpen, setIsModalCreateOpen , workspaceCurrent
           </div>
           <div className="">
             <span className={`p-2 rounded-md text-white bg-gray-600`}>
-              To Do
+              必要
             </span>
             <div className="grid grid-cols-2 text-black">
               <div className="" style={{ lineHeight: "30px" }}>
-                <div className="m-1 mt-4">Workspace</div>
+                <div className="m-1 mt-4">作業領域</div>
                 <div className="m-1">Assignee</div>
                 <div className="m-1">Priority</div>
                 <div className="m-1">Deadline</div>

@@ -58,7 +58,7 @@ const User = (props) => {
         </div>
         <div className="filter-box">
           <FilterIcon className="filter-icon" />
-          <div>Filter</div>
+          <div>フィルター</div>
         </div>
       </div>
       <div className='teams-member'>

@@ -3,8 +3,8 @@ import { Menu, Dropdown, Row, Col } from "antd";
 import useStyleDashboard from "./style";
 import AntDesignOutlined from "@ant-design/icons/AntDesignOutlined";
 import YourWork from "../your-work";
-import Workspace from "../workspace";
-import Teams from "../teams";
+import 作業領域 from "../workspace";
+import チーム from "../teams";
 import * as api from "../../api/index";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -16,7 +16,7 @@ import { DownOutlined } from "@ant-design/icons";
 import { Avatar } from "antd";
 import { USER_LIST } from "../../sample-data";
 import { ProfileDropdown } from "../profile/ProfileDropdown";
-const Dashboard = (props) => {
+const ダッシュボード = (props) => {
   const [tab, setTab] = useState("yourWork");
   const [workspaceTab, setWorkspaceTab] = useState(null);
   const classes = useStyleDashboard();
@@ -25,9 +25,9 @@ const Dashboard = (props) => {
   const workspaceList = useSelector((state) => state.data.workspaceList);
   const userList = useSelector((state) => state.data.userList);
   const tabItems = [
-    { label: "Your work", key: "yourWork" },
-    { label: "Workspace", key: "workspace", dropdown: true },
-    { label: "Teams", key: "teams" },
+    { label: "仕事", key: "yourWork" },
+    { label: "作業領域", key: "workspace", dropdown: true },
+    { label: "チーム", key: "teams" },
   ];
 
   const handleOnChange = (value) => {
@@ -110,7 +110,7 @@ const Dashboard = (props) => {
                       ))}
                       <hr style={{ width: "90%" }} />
                       <Menu.Item key="create-workspace">
-                        <span>Create Workspace</span>
+                        <span>新しい作業領域</span>
                       </Menu.Item>
                     </Menu>
                   }
@@ -134,16 +134,16 @@ const Dashboard = (props) => {
       <div className={classes.tab}>
         {tab === "yourWork" && <YourWork />}
         {tab === "workspace" && workspaceTab !== null && (
-          <Workspace
+          <作業領域
             workspace={getWorkspace()}
             taskList={taskList}
             userList={userList}
           />
         )}
-        {tab === "teams" && <Teams />}
+        {tab === "teams" && <チーム />}
       </div>
     </div>
   );
 };
 
-export default Dashboard;
+export default ダッシュボード;

@@ -1,19 +1,19 @@
 import React, { useState } from "react";
 import { Tabs, Space } from "antd";
 import useStyleWorkspace from "./style";
-import List from "./List";
-import Board from "./Board";
-import Document from "./Document";
-import Statistics from "./Statistics";
+import リスト from "./List";
+import 看板 from "./Board";
+import 資料 from "./Document";
+import 統計 from "./Statistics";
 
-const Workspace = ({ workspace, taskList, userList }) => {
+const 作業領域 = ({ workspace, taskList, userList }) => {
   const [tab, setTab] = useState("list");
   const classes = useStyleWorkspace();
   const tabItems = [
-    { label: "List", key: "list" },
-    { label: "Board", key: "board" },
-    { label: "Document", key: "document" },
-    { label: "Statistics", key: "statistics" },
+    { label: "リスト", key: "list" },
+    { label: "看板", key: "board" },
+    { label: "資料", key: "document" },
+    { label: "統計", key: "statistics" },
   ];
 
   const handleOnChange = (value) => {
@@ -43,13 +43,13 @@ const Workspace = ({ workspace, taskList, userList }) => {
         />
       </div>
       <div className={classes.content}>
-        {tab === "list" && <List workspace={workspace} taskList = {taskList} userList={userList} />}
-        {tab === "board" && <Board workspace={workspace} taskList={taskList} userList={userList} />}
-        {tab === "document" && <Document workspace={workspace} />}
-        {tab === "statistics" && <Statistics workspace={workspace} userList={userList} />}
+        {tab === "list" && <リスト workspace={workspace} taskList = {taskList} userList={userList} />}
+        {tab === "board" && <看板 workspace={workspace} taskList={taskList} userList={userList} />}
+        {tab === "document" && <資料 workspace={workspace} />}
+        {tab === "statistics" && <統計 workspace={workspace} userList={userList} />}
       </div>
     </div>
   );
 };
 
-export default Workspace;
+export default 作業領域;

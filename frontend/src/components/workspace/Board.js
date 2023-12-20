@@ -9,7 +9,7 @@ import { updateTask } from "../../redux/data/reducer";
 import { Avatar, Tooltip, Button, Modal, Row, Col, Input } from "antd";
 import "./board.scss";
 import CreateTask from "../../components/modal/CreateTask.jsx";
-const Board = ({ workspace, taskList, userList }) => {
+const 看板 = ({ workspace, taskList, userList }) => {
   const classes = sectionStyle();
   const sortedTaskList = [...taskList].sort((a, b) => {
     const priorityOrder = { High: 3, Medium: 2, Low: 1 };
@@ -78,7 +78,7 @@ const Board = ({ workspace, taskList, userList }) => {
           }}
         >
           <div>
-            <span>Filter: </span>
+            <span>フィルター: </span>
             {workspace.user.map((user) => (
               <Tooltip
                 key={user.id}
@@ -112,7 +112,7 @@ const Board = ({ workspace, taskList, userList }) => {
                     ref={provided.innerRef}
                   >
                     <div className={classes.kanban__section__title}>
-                      <div>To Do</div>{" "}
+                      <div>必要</div>{" "}
                       <div style={{ fontSize: "14px", fontWeight: "400" }}>
                         Total {todoCount} issue
                       </div>
@@ -156,7 +156,7 @@ const Board = ({ workspace, taskList, userList }) => {
                     ref={provided.innerRef}
                   >
                     <div className={classes.kanban__section__title}>
-                      <div>In Progress</div>{" "}
+                      <div>発展中</div>{" "}
                       <div style={{ fontSize: "14px", fontWeight: "400" }}>
                         Total {inProgressCount} issue
                       </div>
@@ -200,7 +200,7 @@ const Board = ({ workspace, taskList, userList }) => {
                     ref={provided.innerRef}
                   >
                     <div className={classes.kanban__section__title}>
-                      <div>Done</div>{" "}
+                      <div>完了</div>{" "}
                       <div style={{ fontSize: "14px", fontWeight: "400" }}>
                         Total {doneCount} issue
                       </div>
@@ -243,4 +243,4 @@ const Board = ({ workspace, taskList, userList }) => {
   );
 };
 
-export default Board;
+export default 看板;

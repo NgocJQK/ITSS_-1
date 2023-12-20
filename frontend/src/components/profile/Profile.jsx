@@ -9,14 +9,14 @@ import { Col, Dropdown, Menu, Row } from "antd";
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import useStyleDashboard from "../dashboard/style";
-import Teams from "../teams";
-import Workspace from "../workspace";
+import チーム from "../teams";
+import 作業領域 from "../workspace";
 import YourWork from "../your-work";
 import { ProfileDropdown } from "./ProfileDropdown";
 import "./profile.scss";
 import Avatar from "antd/es/avatar/avatar";
 import { useNavigate } from "react-router-dom";
-const Profile = () => {
+const プロフィル = () => {
   const classes = useStyleDashboard();
   const dispatch = useDispatch();
   const navigate = useNavigate()
@@ -24,9 +24,9 @@ const Profile = () => {
   const [tab, setTab] = useState("");
   const [workspaceTab, setWorkspaceTab] = useState(null);
   const tabItems = [
-    { label: "Your work", key: "yourWork" },
-    { label: "Workspace", key: "workspace", dropdown: true },
-    { label: "Teams", key: "teams" },
+    { label: "仕事", key: "yourWork" },
+    { label: "作業領域", key: "workspace", dropdown: true },
+    { label: "チーム", key: "teams" },
   ];
   const handleOnChange = (value) => {
     setTab(value.key);
@@ -88,7 +88,7 @@ const Profile = () => {
                     ))}
                     <hr style={{ width: "90%" }} />
                     <Menu.Item key="create-workspace">
-                      <span>Create Workspace</span>
+                      <span>新しい作業領域</span>
                     </Menu.Item>
                   </Menu>
                 }
@@ -440,4 +440,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default プロフィル;

@@ -16,7 +16,7 @@ export default function Labels() {
   }
   return (
     <React.Fragment>
-      <p className="text-gray-500 font-bold mt-10">Filter</p>
+      <p className="text-gray-500 font-bold mt-10">フィルター</p>
       {labels.map(({ priority: lbl, checked }, idx) => (
         <label key={idx} className="items-center mt-3 block">
           <input

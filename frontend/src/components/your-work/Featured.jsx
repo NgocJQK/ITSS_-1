@@ -5,7 +5,7 @@ import { Chart, ArcElement } from "chart.js";
 Chart.register(ArcElement);
 const Featured = () => {
   const data = {
-    labels: ["Done", "Canceled", "Scheduled", "Processing"],
+    labels: ["完了", "キャンセル", "計画", "発展中"],
     datasets: [
       {
         data: [40, 7, 35, 18],

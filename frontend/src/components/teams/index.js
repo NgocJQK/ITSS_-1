@@ -4,7 +4,7 @@ import useStyleTeams from './style'
 import User from './User'
 import Group from './Group'
 
-const Teams = props => {
+const チーム = props => {
   const [tab, setTab] = useState('user')
   const classes = useStyleTeams()
 
@@ -30,4 +30,4 @@ const Teams = props => {
   )
 }
 
-export default Teams
+export default チーム

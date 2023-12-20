@@ -14,7 +14,7 @@ const Widget = ({ type }) => {
   switch (type) {
     case "scheduled":
       data = {
-        title: "Scheduled",
+        title: "計画",
         numberTask: 35,
         icon: (
           <ScheduleOutlined
@@ -28,7 +28,7 @@ const Widget = ({ type }) => {
       break;
     case "done":
       data = {
-        title: "Done",
+        title: "完了",
         numberTask: 40,
         icon: (
           <FileDoneOutlined
@@ -42,7 +42,7 @@ const Widget = ({ type }) => {
       break;
     case "processing":
       data = {
-        title: "Processing",
+        title: "発展中",
         numberTask: 18,
         icon: (
           <EditOutlined
@@ -56,7 +56,7 @@ const Widget = ({ type }) => {
       break;
     case "canceled":
       data = {
-        title: "Canceled",
+        title: "キャンセル",
         numberTask: 7,
         icon: (
           <DeleteOutlined
@@ -70,7 +70,7 @@ const Widget = ({ type }) => {
       break;
     case "missed":
       data = {
-        title: "Missed",
+        title: "忘れ",
         numberTask: 0,
         icon: (
           <StopOutlined

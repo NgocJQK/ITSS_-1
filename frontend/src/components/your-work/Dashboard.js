@@ -3,7 +3,7 @@ import Chart from './Chart'
 import Featured from './Featured'
 import Widget from './Widget'
 import "./dashboard.scss"
-const Dashboard = props => {
+const ダッシュボード = props => {
 
   return (
     <div className='homeContainer'>
@@ -22,4 +22,4 @@ const Dashboard = props => {
   )
 }
 
-export default Dashboard
+export default ダッシュボード

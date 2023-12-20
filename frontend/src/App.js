@@ -1,12 +1,12 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import useStyleApp from "./style.js";
-import Dashboard from "./components/dashboard/index.js";
+import ダッシュボード from "./components/dashboard/index.js";
 import "./index.css";
 import ContextWrapper from "./components/your-work/calendar/context/ContextWrapper.js";
-import Register from "./components/register/Register.jsx";
-import Profile from "./components/profile/Profile.jsx";
-import Login from './components/login/login';
+import 登録 from "./components/register/Register.jsx";
+import プロフィル from "./components/profile/Profile.jsx";
+import ログイン from './components/login/login';
 
 const App = (props) => {
   const classes = useStyleApp();
@@ -15,10 +15,10 @@ const App = (props) => {
     <div className={classes.app}>
       <ContextWrapper>
         <Routes>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/" element={<ダッシュボード />} />
+          <Route path="/register" element={<登録 />} />
+          <Route path="/login" element={<ログイン />} />
+          <Route path="/profile" element={<プロフィル />} />
         </Routes>
       </ContextWrapper>
     </div>

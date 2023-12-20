@@ -27,19 +27,19 @@ export const ProfileDropdown = () => {
           <ul className="flex flex-col ">
             <li onClick={() => navigate("/profile")}>
               <ProfileOutlined />
-              <p>Profile</p>
+              <p>プロフィル</p>
             </li>
             <li>
               <SettingFilled />
-              <p>Setting</p>
+              <p>セッティング</p>
             </li>
             <li>
               <QuestionCircleOutlined />
-              <p>Help center</p>
+              <p>サポート</p>
             </li>
             <li onClick={()=>navigate("/login")}>
               <LogoutOutlined />
-              <p>Log out</p>
+              <p>ログアウト</p>
             </li>
           </ul>
         </div>

@@ -5,7 +5,7 @@ import CalendarHeader from "./CalenderHeader";
 import { getMonth } from "./util";
 import GlobalContext from "./context/GlobalContext";
 import { EventModal } from "./EventModal";
-const Calendar = (props) => {
+const カレンダー = (props) => {
   const [currentMonth, setCurrentMonth] = useState(getMonth());
   const { monthIndex, showEventModal } = useContext(GlobalContext);
   useEffect(() => {
@@ -26,4 +26,4 @@ const Calendar = (props) => {
   );
 };
 
-export default Calendar;
+export default カレンダー;

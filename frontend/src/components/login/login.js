@@ -3,8 +3,9 @@ import AntDesignOutlined from "@ant-design/icons/AntDesignOutlined";
 import "./loginStyle.css";
 import logo from "./logo.png";
 import { useNavigate } from "react-router-dom";
+import * as api from "../../api/index";
 
-const Login = (props) => {
+const ログイン = (props) => {
   const navigate = useNavigate();
   return (
     <div class="box">
@@ -17,12 +18,12 @@ const Login = (props) => {
         </div>
 
         <div class="input-field">
-          <input type="text" class="input" placeholder="USERNAME" id=""/>
+          <input type="text" class="input" placeholder="ユーザーネーム" id="username"/>
           <i class="bx bx-user"></i>
         </div>
 
         <div class="input-field">
-          <input type="Password" class="input" placeholder="PASSWORD" id="" />
+          <input type="Password" class="input" placeholder="パスワード" id="password" />
           <i class="bx bx-lock-alt"></i>
         </div>
 
@@ -30,9 +31,13 @@ const Login = (props) => {
           <input
             type="submit"
             class="submit"
-            value="LOGIN"
+            value="ログイン"
             id=""
             onClick={() => {
+              api.handleLogin(
+                document.getElementById('username').value, 
+                document.getElementById('password').value
+              )
               navigate("/");
             }}
           />
@@ -42,18 +47,18 @@ const Login = (props) => {
           <div class="one"></div>
           <div class="two">
             <label>
-              <a href="#">Forgot password?</a>
+              <a href="#">パスワードをお忘れですか?</a>
             </label>
           </div>
         </div>
 
         <div class="login-signup">
-          You don't have account?{" "}
-          <a onClick={(e) => navigate("/register")} style={{cursor:"pointer"}}>Sign up</a>
+          アカウントがありませんか?{" "}
+          <a onClick={(e) => navigate("/register")} style={{cursor:"pointer"}}>登録</a>
         </div>
       </div>
     </div>
   );
 };
 
-export default Login;
+export default ログイン;
